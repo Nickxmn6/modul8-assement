@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.modul.assessment.controller;
 
-/**
- *
- * @author HYPE AMD
- */
+import com.mycompany.modul.assessment.model.Barang;
+import java.util.ArrayList;
+import java.util.List;
+
 public class StokController {
-    
+    private List<Barang> listBarang = new ArrayList<>();
+
+    public void tambahBarang(String id, String nama, int stok) {
+        listBarang.add(new Barang(id, nama, stok));
+    }
+
+    public List<Barang> getAllBarang() {
+        return listBarang;
+    }
+
+    public void hapusBarang(int index) {
+        if (index >= 0 && index < listBarang.size()) {
+            listBarang.remove(index);
+        }
+    }
 }
