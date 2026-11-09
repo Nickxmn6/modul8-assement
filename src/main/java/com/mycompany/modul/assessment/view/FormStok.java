@@ -3,6 +3,7 @@ package com.mycompany.modul.assessment.view;
 import com.mycompany.modul.assessment.model.Barang;
 import com.mycompany.modul.assessment.repository.CrudRepository;
 import com.mycompany.modul.assessment.repository.BarangRepository;
+import com.mycompany.modul.assessment.repository.BarangDatabaseRepository;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -17,7 +18,7 @@ public class FormStok extends JFrame {
     private JTextField txtId, txtNama, txtStok;
 
     public FormStok() {
-        this.repository = new BarangRepository();
+        this.repository = new BarangDatabaseRepository();
         
         setTitle("Kelola Stok (SOLID Edition)");
         setSize(500, 400);
